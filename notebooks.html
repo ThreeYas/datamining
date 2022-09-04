@@ -206,7 +206,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="(https://colab.research.google.com)/github/executablebooks/jupyter-book/blob/master/docs/notebooks.ipynb"
+        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/notebooks.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -369,7 +369,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/sherlyprastica/digital_society_vs_unemployment_analysis/6b68068bd80ee412c992860a67b1d8174b2218be/pengangguran_umur.csv&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membaca dataset csv dari url</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/ThreeYas/pengangguranumur/main/pengangguran_umur.csv&#39;</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -383,7 +384,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d022c424-1933-4ab7-a2b9-5390cbd6601a">
+  <div id="df-732735aa-2f46-431b-9c56-271d9570d199">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -469,16 +470,10 @@ title="Print to PDF"
       <td>0.68</td>
       <td>1.70</td>
     </tr>
-    <tr>
-      <th>10</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d022c424-1933-4ab7-a2b9-5390cbd6601a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-732735aa-2f46-431b-9c56-271d9570d199')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -529,12 +524,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d022c424-1933-4ab7-a2b9-5390cbd6601a button.colab-df-convert');
+          document.querySelector('#df-732735aa-2f46-431b-9c56-271d9570d199 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d022c424-1933-4ab7-a2b9-5390cbd6601a');
+          const element = document.querySelector('#df-732735aa-2f46-431b-9c56-271d9570d199');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
