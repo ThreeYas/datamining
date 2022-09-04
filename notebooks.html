@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Data Mining - Teknik Informatika 2020" href="intro.html" />
+    <link rel="prev" title="Pustaka Python" href="pendahuluan.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,6 +113,18 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pendahuluan
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pendahuluan.html">
+   Pustaka Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Tugas Data Mining
  </span>
@@ -307,12 +319,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-dataset-dari-url-menggunakan-pandas">
+   Membaca Dataset dari Url menggunakan pandas
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistik-matematika">
+   Statistik Matematika
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kemiringan-skewned">
+   Kemiringan/Skewned
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -324,6 +375,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-dataset-dari-url-menggunakan-pandas">
+   Membaca Dataset dari Url menggunakan pandas
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistik-matematika">
+   Statistik Matematika
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kemiringan-skewned">
+   Kemiringan/Skewned
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -333,12 +412,19 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-1">
 <h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="membaca-dataset-dari-url-menggunakan-pandas">
+<h1>Membaca Dataset dari Url menggunakan pandas<a class="headerlink" href="#membaca-dataset-dari-url-menggunakan-pandas" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mengimpor paket pandas kemudian diberi nama alias pd</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="c1"># mengimpor paket seaborn kemudian diberi nama alias sns</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="c1"># mengimpor paket numpy kemudian diberi nama alias np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># mengimpor paket statistics kemudian diberi nama alias st</span>
+<span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
 </pre></div>
 </div>
 </div>
@@ -360,7 +446,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-48dded95-8713-4a84-9137-5125a85c19db">
+  <div id="df-6c75fcdd-a626-4b44-ae2f-d776a55cf24f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -449,7 +535,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-48dded95-8713-4a84-9137-5125a85c19db')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6c75fcdd-a626-4b44-ae2f-d776a55cf24f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -500,12 +586,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-48dded95-8713-4a84-9137-5125a85c19db button.colab-df-convert');
+          document.querySelector('#df-6c75fcdd-a626-4b44-ae2f-d776a55cf24f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-48dded95-8713-4a84-9137-5125a85c19db');
+          const element = document.querySelector('#df-6c75fcdd-a626-4b44-ae2f-d776a55cf24f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -525,6 +611,27 @@ title="Print to PDF"
     </div>
   </div>
 </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 10 entries, 0 to 9
+Data columns (total 3 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   umur        10 non-null     object 
+ 1   tahun_2019  10 non-null     float64
+ 2   tahun_2020  10 non-null     float64
+dtypes: float64(2), object(1)
+memory usage: 368.0+ bytes
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -568,6 +675,228 @@ Name: tahun_2020, dtype: float64
 </div>
 </div>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="statistik-matematika">
+<h1>Statistik Matematika<a class="headerlink" href="#statistik-matematika" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rata - rata dari data tahun 2019</span>
+<span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.222
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rata - rata dari data tahun 2020</span>
+<span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.687
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 1 dari data tahun 2019</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.69
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 1 dari data tahun 2020</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5575
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 2 dari data tahun 2019</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1550000000000002
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 2 dari data tahun 2020</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 3 dari data tahun 2019</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.2725
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 3 dari data tahun 2020</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.765
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median dari data tahun 2019</span>
+<span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1550000000000002
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median dari data tahun 2020</span>
+<span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desil 1 - 10 dari data tahun 2019</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.68 ,  1.238,  1.58 ,  1.762,  1.96 ,  2.155,  2.758,  4.621,
+        8.88 , 16.688])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desil 1 - 10 dari data tahun 2020</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.7  ,  3.059,  3.474,  3.589,  3.796,  4.12 ,  4.892,  6.956,
+       11.158, 17.473])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jangkaun dari data tahun 2019</span>
+<span class="c1"># rumus jangkauan J = Xn - X1</span>
+<span class="n">Xn</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
+<span class="n">X1</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
+<span class="n">J</span> <span class="o">=</span> <span class="n">Xn</span> <span class="o">-</span> <span class="n">X1</span>
+<span class="n">J</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25.44
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jangkaun dari data tahun 2020</span>
+<span class="c1"># rumus jangkauan J = Xn - X1</span>
+<span class="n">Xn</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
+<span class="n">X1</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
+<span class="n">J</span> <span class="o">=</span> <span class="n">Xn</span> <span class="o">-</span> <span class="n">X1</span>
+<span class="n">J</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="kemiringan-skewned">
+<h1>Kemiringan/Skewned<a class="headerlink" href="#kemiringan-skewned" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9588710191046237
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.707599201811743
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan histogram untuk kolom tahun_2019 pada data menggunakan seaborn</span>
@@ -580,7 +909,7 @@ Name: tahun_2020, dtype: float64
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/notebooks_6_1.png" src="_images/notebooks_6_1.png" />
+<img alt="_images/notebooks_26_1.png" src="_images/notebooks_26_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -595,7 +924,7 @@ Name: tahun_2020, dtype: float64
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/notebooks_7_1.png" src="_images/notebooks_7_1.png" />
+<img alt="_images/notebooks_27_1.png" src="_images/notebooks_27_1.png" />
 </div>
 </div>
 </section>
@@ -627,11 +956,11 @@ Name: tahun_2020, dtype: float64
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="pendahuluan.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Data Mining - Teknik Informatika 2020</p>
+            <p class="prev-next-title">Pustaka Python</p>
         </div>
     </a>
 </div>
