@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas 1 &#8212; Triyas Septiyanto</title>
+    <title>Statistik Diskriptif &#8212; Triyas Septiyanto</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,8 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="_static/test.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Diskritisasi" href="tugas2.html" />
     <link rel="prev" title="Pustaka Python" href="pendahuluan.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -93,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="_static/Inpostor.png" class="logo" alt="logo">
+      <img src="_static/Triyas.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Triyas Septiyanto</h1>
@@ -132,7 +136,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Tugas 1
+   Statistik Diskriptif
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas2.html">
+   Diskritisasi
   </a>
  </li>
 </ul>
@@ -342,14 +351,75 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-dataset-csv-dari-url-menggunakan-pandas">
-   Membaca Dataset csv dari Url menggunakan pandas
+  <a class="reference internal nav-link" href="#membaca-dataset-csv-dari-url">
+   Membaca Dataset csv dari Url
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#statistik-matematika">
    Statistik Matematika
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modus">
+     Modus
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-cara-menentukan-nilai-modus-pada-data-tunggal">
+       Rumus Cara Menentukan Nilai Modus Pada Data Tunggal
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-modus-data-kelompok">
+       Rumus Modus Data Kelompok
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#median">
+     Median
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean-rata-rata">
+     Mean (Rata - rata)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kuartil">
+     Kuartil
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-kuartil-data-tunggal-jika-data-ganjil">
+       Rumus Kuartil Data Tunggal jika Data Ganjil
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-kuartil-data-tunggal-jika-data-genap">
+       Rumus Kuartil Data Tunggal jika Data Genap
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-kuartil-pada-data-kelompok">
+       Rumus Kuartil pada Data Kelompok
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desil">
+     Desil
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#range-jangkauan">
+     Range (Jangkauan)
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kemiringan-skewned">
@@ -365,7 +435,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tugas 1</h1>
+                <h1>Statistik Diskriptif</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -376,14 +446,75 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membaca-dataset-csv-dari-url-menggunakan-pandas">
-   Membaca Dataset csv dari Url menggunakan pandas
+  <a class="reference internal nav-link" href="#membaca-dataset-csv-dari-url">
+   Membaca Dataset csv dari Url
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#statistik-matematika">
    Statistik Matematika
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modus">
+     Modus
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-cara-menentukan-nilai-modus-pada-data-tunggal">
+       Rumus Cara Menentukan Nilai Modus Pada Data Tunggal
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-modus-data-kelompok">
+       Rumus Modus Data Kelompok
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#median">
+     Median
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean-rata-rata">
+     Mean (Rata - rata)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kuartil">
+     Kuartil
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-kuartil-data-tunggal-jika-data-ganjil">
+       Rumus Kuartil Data Tunggal jika Data Ganjil
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-kuartil-data-tunggal-jika-data-genap">
+       Rumus Kuartil Data Tunggal jika Data Genap
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rumus-kuartil-pada-data-kelompok">
+       Rumus Kuartil pada Data Kelompok
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desil">
+     Desil
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#range-jangkauan">
+     Range (Jangkauan)
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kemiringan-skewned">
@@ -400,10 +531,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1">
-<h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Permalink to this headline">#</a></h1>
-<section id="membaca-dataset-csv-dari-url-menggunakan-pandas">
-<h2>Membaca Dataset csv dari Url menggunakan pandas<a class="headerlink" href="#membaca-dataset-csv-dari-url-menggunakan-pandas" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="statistik-diskriptif">
+<h1>Statistik Diskriptif<a class="headerlink" href="#statistik-diskriptif" title="Permalink to this headline">#</a></h1>
+<section id="membaca-dataset-csv-dari-url">
+<h2>Membaca Dataset csv dari Url<a class="headerlink" href="#membaca-dataset-csv-dari-url" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mengimpor paket pandas kemudian diberi nama alias pd</span>
@@ -421,7 +552,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membaca dataset csv dari url</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/ThreeYas/pengangguranumur/main/pengangguran_umur.csv&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/ThreeYas/BMI/main/500_Person_Gender_Height_Weight_Index.csv&#39;</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -429,13 +560,14 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Melihat data</span>
+<span class="n">data</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-45835b87-0b69-4753-aea0-4d1b000e16bc">
+  <div id="df-d3158e4a-1e2d-485d-89b4-7f2392b7b796">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -455,76 +587,95 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>umur</th>
-      <th>tahun_2019</th>
-      <th>tahun_2020</th>
+      <th>Gender</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Index</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>15-19</td>
-      <td>26.12</td>
-      <td>24.34</td>
+      <td>Male</td>
+      <td>174</td>
+      <td>96</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>20-24</td>
-      <td>15.64</td>
-      <td>16.71</td>
+      <td>Male</td>
+      <td>189</td>
+      <td>87</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>25-29</td>
-      <td>7.19</td>
-      <td>9.77</td>
+      <td>Female</td>
+      <td>185</td>
+      <td>110</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>30-34</td>
-      <td>3.52</td>
-      <td>5.75</td>
+      <td>Female</td>
+      <td>195</td>
+      <td>104</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>35-39</td>
-      <td>2.25</td>
-      <td>4.32</td>
+      <td>Male</td>
+      <td>149</td>
+      <td>61</td>
+      <td>3</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>40-44</td>
-      <td>2.06</td>
-      <td>3.92</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>45-49</td>
-      <td>1.81</td>
-      <td>3.54</td>
+      <th>495</th>
+      <td>Female</td>
+      <td>150</td>
+      <td>153</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>50-54</td>
-      <td>1.65</td>
-      <td>3.61</td>
+      <th>496</th>
+      <td>Female</td>
+      <td>184</td>
+      <td>121</td>
+      <td>4</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>55-59</td>
-      <td>1.30</td>
-      <td>3.21</td>
+      <th>497</th>
+      <td>Female</td>
+      <td>141</td>
+      <td>136</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>60 keatas</td>
-      <td>0.68</td>
-      <td>1.70</td>
+      <th>498</th>
+      <td>Male</td>
+      <td>150</td>
+      <td>95</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>Male</td>
+      <td>173</td>
+      <td>131</td>
+      <td>5</td>
     </tr>
   </tbody>
 </table>
+<p>500 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-45835b87-0b69-4753-aea0-4d1b000e16bc')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d3158e4a-1e2d-485d-89b4-7f2392b7b796')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -575,12 +726,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-45835b87-0b69-4753-aea0-4d1b000e16bc button.colab-df-convert');
+          document.querySelector('#df-d3158e4a-1e2d-485d-89b4-7f2392b7b796 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-45835b87-0b69-4753-aea0-4d1b000e16bc');
+          const element = document.querySelector('#df-d3158e4a-1e2d-485d-89b4-7f2392b7b796');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -601,65 +752,99 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
+<p>About Dataset
+Gender : Male / Female</p>
+<p>Height : Number (cm)</p>
+<p>Weight : Number (Kg)</p>
+<p>Index :</p>
+<p>0 - Extremely Weak</p>
+<p>1 - Weak</p>
+<p>2 - Normal</p>
+<p>3 - Overweight</p>
+<p>4 - Obesity</p>
+<p>5 - Extreme Obesity</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menampilkan informasi detail tentang dataframe</span>
+<span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 10 entries, 0 to 9
-Data columns (total 3 columns):
- #   Column      Non-Null Count  Dtype  
----  ------      --------------  -----  
- 0   umur        10 non-null     object 
- 1   tahun_2019  10 non-null     float64
- 2   tahun_2020  10 non-null     float64
-dtypes: float64(2), object(1)
-memory usage: 368.0+ bytes
+RangeIndex: 500 entries, 0 to 499
+Data columns (total 4 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   Gender  500 non-null    object
+ 1   Height  500 non-null    int64 
+ 2   Weight  500 non-null    int64 
+ 3   Index   500 non-null    int64 
+dtypes: int64(3), object(1)
+memory usage: 15.8+ KB
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menunjukkan beberapa data statistik pada kolom tahun_2019</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menunjukkan beberapa data statistik pada kolom Height</span>
+<span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    10.000000
-mean      6.222000
-std       8.308461
-min       0.680000
-25%       1.690000
-50%       2.155000
-75%       6.272500
-max      26.120000
-Name: tahun_2019, dtype: float64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    500.000000
+mean     169.944000
+std       16.375261
+min      140.000000
+25%      156.000000
+50%      170.500000
+75%      184.000000
+max      199.000000
+Name: Height, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menunjukkan beberapa data statistik pada kolom tahun_2020</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menunjukkan beberapa data statistik pada kolom Weight</span>
+<span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    10.000000
-mean      7.687000
-std       7.318637
-min       1.700000
-25%       3.557500
-50%       4.120000
-75%       8.765000
-max      24.340000
-Name: tahun_2020, dtype: float64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    500.000000
+mean     106.000000
+std       32.382607
+min       50.000000
+25%       80.000000
+50%      106.000000
+75%      136.000000
+max      160.000000
+Name: Weight, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menunjukkan beberapa data statistik pada kolom Index</span>
+<span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    500.000000
+mean       3.748000
+std        1.355053
+min        0.000000
+25%        3.000000
+50%        4.000000
+75%        5.000000
+max        5.000000
+Name: Index, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -667,244 +852,479 @@ Name: tahun_2020, dtype: float64
 </section>
 <section id="statistik-matematika">
 <h2>Statistik Matematika<a class="headerlink" href="#statistik-matematika" title="Permalink to this headline">#</a></h2>
+<section id="modus">
+<h3>Modus<a class="headerlink" href="#modus" title="Permalink to this headline">#</a></h3>
+<p><em><strong>Modus</strong></em> adalah sebuah nilai data yang paling sering muncul atau data yang mempunyai nilai frekuensi yang paling tinggi.</p>
+<p>Di dalam modus data ini, terdapat dua bentuk modus,yaitu modus data tunggal dan modus data kelompok. Dalam mencari nilai dari modus pada data tunggal bisa di bilang mudah pada umumnya, namun sedangkan untuk mencari sebuah nilai pada modus data kelompok tidak bisa di bilang mudah seperti pada pencarian data pada modus data tunggal, maka kita perlu menggunakan sebuah rumus tertentu untuk mencarinya.</p>
+<section id="rumus-cara-menentukan-nilai-modus-pada-data-tunggal">
+<h4>Rumus Cara Menentukan Nilai Modus Pada Data Tunggal<a class="headerlink" href="#rumus-cara-menentukan-nilai-modus-pada-data-tunggal" title="Permalink to this headline">#</a></h4>
+<p>Seperti yang sudah dijelaskan pada pengertian diatas tadi, bahwa untuk mencari nilai dari modus pada tunggal bisa di bilang cukup mudah pada umumnya.Kita hanya perlu mengurutkan data dari yang terkecil sampai ke yang terbesar atau bisa sebaliknya kemudian kita cek data atau angka berapa yang nilai yang paling banyak muncul.</p>
+<p>Contoh:</p>
+<p>Pada data:</p>
+<div class="math notranslate nohighlight">
+\[ 2, 3, 4, 8, 10, 5, 4, 8, 4, 6, 4, 8, 4, 7, 9 \]</div>
+<p>Kita urutkan terlebih dahulu nilainya dari yang terkecil ke yang terbesar menjadi:</p>
+<div class="math notranslate nohighlight">
+\[ 2, 3, 4, 4, 4, 4, 4, 5, 6, 7, 8, 8, 8, 9, 10 \]</div>
+<p>Dengan mengurutkannya seperti pada data di atas, maka akan memudahkan kita untuk menemukan modus data tersebut.
+Dalam kasus di atas, modus datanya adalah 4 karena dia muncul sebanyak 5 kali. Akan tetapi apabila kita bisa mencarinya tanpa terlebih dahulu mengurutkannya itu sebenarnya lebih baik. Yang terpenting adalah kita harus teliti.
+Apabila Ada dua Modus
+Di dalam data tunggal, ada kemungkinan bisa terjadi modus yang sama, maksudnya nilai modus tidak mesti hanya satu nilai saja yang muncul, namun bisa lebih dari satu, bisa 2 atau 3, dan seterusnya.</p>
+<p>Contoh Soal:</p>
+<div class="math notranslate nohighlight">
+\[ Angka: 3, 4, 8, 10, 5, 4, 8, 4, 6, 15, 8, 13, 7 \]</div>
+<p>Apabila kita urutkan maka kita akan menemukan dua buah modus yaitu 4 dan 8, masing-masing muncul sebanyak 3 kali.</p>
+<p>Apabila ada dua modus sering disebut dengan bimodus kalau lebih dari dua disebut multimodus.</p>
+<div class="math notranslate nohighlight">
+\[3,4,4,4,5,6,7,8,8,8,10,13,15\]</div>
+</section>
+<section id="rumus-modus-data-kelompok">
+<h4>Rumus Modus Data Kelompok<a class="headerlink" href="#rumus-modus-data-kelompok" title="Permalink to this headline">#</a></h4>
+<p>Mencari modus untuk sebuah data kelompok sedikit berbeda dengan data tunggal.</p>
+<p>Data Kelompok adalah sebuah data yang disajikan bukan dalam bentuk tampilan tiap data satu persatu akan tetapi disajikan dalam rentang angka yang disebut kelas interval.</p>
+<p>Untuk mencari modus dari data kelompok kita dapat menggunakan rumus sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[ M_0 =  b  + \left(  \frac {b_1}{b_1 +b_2} \right) p \]</div>
+<p>M0 yaitu: modus data kelompok</p>
+<p>b yaitu: tepi bawah kelas modus</p>
+<p>b1 yaitu: selisih frekuensi kelas modus dengan kelas sebelumnya</p>
+<p>b2 yaitu: selisih frekuensi kelas modus dengan kelas sesudahnya</p>
+<p>nilai b1 dan b2 to adalah mutlak (selalu positif)</p>
+<p>Contoh Soal :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kelas</p></th>
+<th class="head"><p>Frekuensi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>21-25</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>26-30</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>31-35</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-odd"><td><p>36-40</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-even"><td><p>40-45</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-odd"><td><p>46-51</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>51-55</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+<p>Jika kita amati tabel di atas, kelas modus berada di rentang 36-40 karena frekuensinya paling banyak yakni 30.</p>
+<p>Tepi bawah kelas modus dapat dicari dengan mengurangi angka paling kecil dalam kelas modus dengan 0,5.</p>
+<p>Maka, tepi bawah = 36-0,5 = 35,5.  Sekarang kita telah mendapatkan datanya, yaitu:</p>
+<ol class="simple">
+<li><p>Tepi bawah (b) = 35,5</p></li>
+<li><p>Selisih frekuensi kelas modus dengan kelas sebelumnya yaitu: (b1) = 30-14 = 16</p></li>
+<li><p>Selisih frekuensi kelas modus dengan kelas sesudahnya yaitu: (b2) = 21-5 = 16</p></li>
+<li><p>Panjang kelas 5</p></li>
+</ol>
+<p>Kita masukkan ke rumus:</p>
+<div class="math notranslate nohighlight">
+\[ M_0 =  b  + \left(  \frac {b_1}{b_1 +b_2} \right) p \]</div>
+<div class="math notranslate nohighlight">
+\[ M_0 =  35,5  + \left(  \frac {16}{16 +16} \right) 5 \]</div>
+<div class="math notranslate nohighlight">
+\[ M_0 =  35,5  + 2,5 = 38 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rata - rata dari data tahun 2019</span>
-<span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modus dari kolom Height</span>
+<span class="n">st</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.222
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rata - rata dari data tahun 2020</span>
-<span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.687
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 1 dari data tahun 2019</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="mi">25</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.69
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 1 dari data tahun 2020</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="mi">25</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5575
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 2 dari data tahun 2019</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1550000000000002
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 2 dari data tahun 2020</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.12
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 3 dari data tahun 2019</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="mi">75</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.2725
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil 3 dari data tahun 2020</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="mi">75</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.765
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>188
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median dari data tahun 2019</span>
-<span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modus dari kolom Index</span>
+<span class="n">st</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1550000000000002
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median dari data tahun 2020</span>
-<span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.12
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desil 1 - 10 dari data tahun 2019</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.68 ,  1.238,  1.58 ,  1.762,  1.96 ,  2.155,  2.758,  4.621,
-        8.88 , 16.688])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desil 1 - 10 dari data tahun 2020</span>
-<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.7  ,  3.059,  3.474,  3.589,  3.796,  4.12 ,  4.892,  6.956,
-       11.158, 17.473])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jangkaun dari data tahun 2019</span>
-<span class="c1"># rumus jangkauan J = Xn - X1</span>
-<span class="n">Xn</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
-<span class="n">X1</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">])</span>
-<span class="n">J</span> <span class="o">=</span> <span class="n">Xn</span> <span class="o">-</span> <span class="n">X1</span>
-<span class="n">J</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25.44
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jangkaun dari data tahun 2020</span>
-<span class="c1"># rumus jangkauan J = Xn - X1</span>
-<span class="n">Xn</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
-<span class="n">X1</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">])</span>
-<span class="n">J</span> <span class="o">=</span> <span class="n">Xn</span> <span class="o">-</span> <span class="n">X1</span>
-<span class="n">J</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+</section>
+<section id="median">
+<h3>Median<a class="headerlink" href="#median" title="Permalink to this headline">#</a></h3>
+<p>Median adalah nilai tengah yang diambil dari data, yang disusun dengan cara yang berurutan mulai dari kecil hingga terbesar. Median dihitung secara matematis dengan dilambangkan Me.
+Median adalah nilai di tengah deret nilai yang disusun dengan data urut dari yang kecil sampai besar, misal dalam deret 3,4,7 mediannya adalah 4</p>
+<p>Cara menentukan median pada data tunggal cukup mudah. Anda dapat mengurutkannya dari data terkecil ke data terbesar. Jika banyak data ganjil tentu kita langsung bisa menentukan nilai tengahnya.</p>
+<p>Bagaimana jika banyaknya data genap? Pada data tunggal untuk menentukan median yaitu:</p>
+<p>Misalkan banyaknya data n, jika n ganjil maka median ditentukan dengan:</p>
+<div class="math notranslate nohighlight">
+\[Me = x \frac {(n+1)}{2}\]</div>
+<p>Rumus Median Data Kelompok</p>
+<p>Median data kelompok dapat ditentukan jika kita telah mengetahui kelas mediannya. Carilah kelas data yang memuat data nilai tengah. Median data kelompok dapat ditentukan dengan</p>
+<div class="math notranslate nohighlight">
+\[Me = Tb + \frac {(1/2 \ n - f_{kum})}{f_i}k\]</div>
+<p>Keterangan:</p>
+<p>Me : median</p>
+<p>tb : tepi bawah kelas median</p>
+<p>n : banyaknya data</p>
+<p>Fkum : frekuensi kumulatif sebelum kelas median</p>
+<p>fi : frekuensi kelas median</p>
+<p>K : panjang kelas</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median dari kolom Height</span>
+<span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>170.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median dari kolom Weight</span>
+<span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>106.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Median dari kolom Index</span>
+<span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mean-rata-rata">
+<h3>Mean (Rata - rata)<a class="headerlink" href="#mean-rata-rata" title="Permalink to this headline">#</a></h3>
+<p><strong>Mean</strong> adalah salah satu ukuran gejala pusat. Mean dapat dikatakan sebagai wakil kumpulan data. Menentukan mean dapat dilakukan dengan cara menjumlahkan seluruh nilai data, kemudian membaginya dengan banyaknya data.</p>
+<p>Rumus untuk mencari rata-rata :</p>
+<div class="math notranslate nohighlight">
+\[\bar{x} = \frac{X_1 + X_2 + X_3 + ... + X_n}{n}\]</div>
+<p>Perhatikan contoh soal berikut:</p>
+<p>Dari ulangan yang sudah beberapa kali dilakukan di sekolah, Ami mendapatkan nilai sebagai berikut 8, 5, 6, 7, 7, 6, 5, 9, 8, 7. Dari data tersebut, tentukan nilai mean atau rata-rata dari ulangan Ami!</p>
+<p>Langkah pertama jumlahkan seluruh nilai ulangannya yaitu 8+5+6+7+7+6+5+9+8+7 dan mendapat hasil sebesar 68. Kemudian, hitung jumlah datanya, yaitu ada 10.</p>
+<div class="math notranslate nohighlight">
+\[\bar{x} = \frac{8, 5, 6, 7, 7, 6, 5, 9, 8, 7}{10}\]</div>
+<p>Maka untuk menghitung nilai rata-rata adalah:</p>
+<div class="math notranslate nohighlight">
+\[\bar{x} = \frac{68}{10}\]</div>
+<div class="math notranslate nohighlight">
+\[\bar{x} = 6,8\]</div>
+<p>Total nilai ulangan/jumlah data = 68/10 maka nilai rata-rata ulangan Ami adalah 6,8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rata - rata dari kolom Height</span>
+<span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>169.944
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rata - rata dari kolom Weight</span>
+<span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>106
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rata - rata dari kolom Index</span>
+<span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.748
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="kuartil">
+<h3>Kuartil<a class="headerlink" href="#kuartil" title="Permalink to this headline">#</a></h3>
+<p>Kuartil adalah suatu rumus yang membagi suatu data menjadi kepada empat yang sama banyak. Kemudian dari setiap data yang terbagi sama banyak tersebut dibatasi oleh sebuah nilai.</p>
+<p>Seperti Pada kuartil, misalakan empat data yang dibagi menjadi sama banyak, akan dibatasi oleh 3 tiga nilai kuartil yaitu kuartil atas, kuartil tengah, dan kuartil bawah.</p>
+<section id="rumus-kuartil-data-tunggal-jika-data-ganjil">
+<h4>Rumus Kuartil Data Tunggal jika Data Ganjil<a class="headerlink" href="#rumus-kuartil-data-tunggal-jika-data-ganjil" title="Permalink to this headline">#</a></h4>
+<p>Kuartil untuk n+1 habis dibagi 4</p>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 1 : Q_1 = x \left( \frac {n+1}{4}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 2 : Q_2 = x \left( \frac {2(n+1)}{4}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 3 : Q_3 = x \left( \frac {3(n+1)}{4}\right)\]</div>
+<p>Kuartil untuk n+1 tidak habis dibagi 4</p>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 1 : Q_1 =  \left( \frac { x \frac {(n-1)}{4} + x \frac {(n+3)}{4} }{2}  \right) \]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 2 : Q_2 = x \left( \frac {2(n+1)}{4}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 3 : Q_3 =  \left( \frac { x \ \frac {(3n+1)}{4} + x \ \frac {(3n+5)}{4} }{2}  \right) \]</div>
+</section>
+<section id="rumus-kuartil-data-tunggal-jika-data-genap">
+<h4>Rumus Kuartil Data Tunggal jika Data Genap<a class="headerlink" href="#rumus-kuartil-data-tunggal-jika-data-genap" title="Permalink to this headline">#</a></h4>
+<p>Jika data habis dibagi 4</p>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 1 : Q_1 =  \left( \frac { x \ \left( \frac {n}{4} \right) + x \ \left( \frac {n}{4} + 1 \right) }{2}  \right) \]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 2 : Q_2 =  \left( \frac { x \ \left( \frac {n}{2} \right) + x \ \left( \frac {n}{2} + 1 \right) }{2}  \right) \]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 3 : Q_3 =  \left( \frac { x \ \left( \frac {3n}{4} \right) + x \ \left( \frac {3n}{4} + 1 \right) }{2}  \right) \]</div>
+<p>Jika data tidak habis dibagi 4</p>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 1 : Q_1 = x \left( \frac {n+2}{4}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 2 : Q_2 =  \left( \frac { x \ \left( \frac {n}{2} \right) + x \ \left( \frac {n}{2} + 1 \right) }{2}  \right) \]</div>
+<div class="math notranslate nohighlight">
+\[ Kuartil\ 3 : Q_3 =  x \left( \frac {3n+2}{4}  \right) \]</div>
+</section>
+<section id="rumus-kuartil-pada-data-kelompok">
+<h4>Rumus Kuartil pada Data Kelompok<a class="headerlink" href="#rumus-kuartil-pada-data-kelompok" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight">
+\[ Q_i = bb_{Qi} +  \frac {\frac {i}{4}n -f_{kjs}}{f_{Qi}} \ . \ p \]</div>
+<p>i = kuartil ke-i</p>
+<p>bbQi = batas bawah kelas kuartil ke i</p>
+<p>n = banyaknya data</p>
+<p>fkjs = frekuensi kumulatif sebelum kelas kuartil ke-i</p>
+<p>fQi = frekuensi kelas kuartil ke-i</p>
+<p>p = panjang kelas</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil dari kolom Height</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">,</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([156. , 170.5, 184. ])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil dari kolom Weight</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="p">,</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 80., 106., 136.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kuartil dari kolom Index</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">,</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 4., 5.])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="desil">
+<h3>Desil<a class="headerlink" href="#desil" title="Permalink to this headline">#</a></h3>
+<p>Desil (decile) adalah istilah dalam statistika untuk yang membagi kelompok data menjadi sepuluh bagian yang sama rata.</p>
+<p>Pada desil, terdapat sembilan nilai desil yang membagi data menjadi sepuluh bagian yang sama. Setiap bagian mewakili 1/10 atau 10% dari kelompok data. Desil ke-5 atau D5 adalah median dari kumpulan data yang dibagi oleh desil.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desil 1 - 10 dari kolom Height</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([140. , 146. , 153. , 159. , 165. , 170.5, 177. , 182. , 186. ,
+       191. ])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desil 1 - 10 dari kolom Weight</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 50. ,  61. ,  72.8,  84. ,  96. , 106. , 117. , 130. , 140. ,
+       150.1])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desil 1 - 10 dari dari Kolom Index</span>
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 2., 2., 3., 4., 4., 4., 5., 5., 5.])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="range-jangkauan">
+<h3>Range (Jangkauan)<a class="headerlink" href="#range-jangkauan" title="Permalink to this headline">#</a></h3>
+<p>Dalam sekelompok data kuantitatif akan terdapat data dengan nilai terbesar dan data dengan nilai terkecil. Rentang (range) atau disebut juga dengan jangkauan adalah selisih antara data dengan nilai yang terbesar dengan data denga nilai yang terkecil tersebut.</p>
+<div class="math notranslate nohighlight">
+\[R = x_{max} - x_{min}\]</div>
+<p>dimana R adalah range (jangkauan atau rentang), x_{max}x
+max
+​
+adalah nilai data yang paling besar dan x_{min}x
+min
+​
+nilai data yang paling kecil.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jangkaun dari kolom Height</span>
+<span class="c1"># rumus jangkauan R = Xmax - Xmin</span>
+<span class="n">Xmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">)</span>
+<span class="n">Xmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Xmax</span> <span class="o">-</span> <span class="n">Xmin</span>
+<span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>59
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jangkaun dari kolom Weight</span>
+<span class="c1"># rumus jangkauan R = Xmax - Xmin</span>
+<span class="n">Xmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="p">)</span>
+<span class="n">Xmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Xmax</span> <span class="o">-</span> <span class="n">Xmin</span>
+<span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>110
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jangkaun dari kolom Index</span>
+<span class="c1"># rumus jangkauan R = Xmax - Xmin</span>
+<span class="n">Xmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span>
+<span class="n">Xmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Xmax</span> <span class="o">-</span> <span class="n">Xmin</span>
+<span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="kemiringan-skewned">
 <h2>Kemiringan/Skewned<a class="headerlink" href="#kemiringan-skewned" title="Permalink to this headline">#</a></h2>
+<p>Dalam teori probabilitas dan statistik, skewness adalah ukuran dari asimetri distribusi probabilitas dari variabel acak bernilai riil tentang nilai tengahnya. Nilai skewness bisa positif, nol, negatif, atau tidak terdefinisi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9588710191046237
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.12191368980139153
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.707599201811743
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.037692236922098034
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan histogram untuk kolom tahun_2019 pada data menggunakan seaborn</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2019&#39;</span><span class="p">]);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.927799319201214
 </pre></div>
 </div>
-<img alt="_images/notebooks_26_1.png" src="_images/notebooks_26_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan histogram untuk kolom tahun_2020 pada data menggunakan seaborn</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tahun_2020&#39;</span><span class="p">]);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan histogram untuk kolom Height menggunakan seaborn</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Height</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -913,7 +1333,37 @@ Name: tahun_2020, dtype: float64
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/notebooks_27_1.png" src="_images/notebooks_27_1.png" />
+<img alt="_images/notebooks_43_1.png" src="_images/notebooks_43_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan histogram untuk kolom Weight menggunakan seaborn</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Weight</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/notebooks_44_1.png" src="_images/notebooks_44_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan histogram untuk kolom Index menggunakan seaborn</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Index</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/notebooks_45_1.png" src="_images/notebooks_45_1.png" />
 </div>
 </div>
 </section>
@@ -952,6 +1402,13 @@ Name: tahun_2020, dtype: float64
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Pustaka Python</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="tugas2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Diskritisasi</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
