@@ -17,15 +17,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# dataframe dari sepal.length beserta kategorinya
-# concat untuk menggabungkan beberapa kolom
-pd.concat((panjang_sepal, data_panjangsepal_ew), axis = )
+#DataFrame yang akan digunakan
+target_data = pd.concat((target,target1), axis = 1)
+#Mengganti Nama Kolom dari dataframe target_data
+target_data.columns = ["value_petal_width", "category_petal_width"]
+target_data
 ------------------
 
-[0;36m  File [0;32m"<ipython-input-14-5d890e6411ed>"[0;36m, line [0;32m3[0m
-[0;31m    pd.concat((panjang_sepal, data_panjangsepal_ew), axis = )[0m
-[0m                                                            ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[0;31m[0m
+[0;31mNameError[0mTraceback (most recent call last)
+[0;32m<ipython-input-17-854903ead71b>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m#DataFrame yang akan digunakan[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mtarget_data[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mconcat[0m[0;34m([0m[0;34m([0m[0mtarget[0m[0;34m,[0m[0mtarget1[0m[0;34m)[0m[0;34m,[0m [0maxis[0m [0;34m=[0m [0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0;31m#Mengganti Nama Kolom dari dataframe target_data[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0mtarget_data[0m[0;34m.[0m[0mcolumns[0m [0;34m=[0m [0;34m[[0m[0;34m"value_petal_width"[0m[0;34m,[0m [0;34m"category_petal_width"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mtarget_data[0m[0;34m[0m[0;34m[0m[0m
 
-SyntaxError: invalid syntax (<ipython-input-14-5d890e6411ed>, line 3)
+[0;31mNameError[0m: name 'target' is not defined
+NameError: name 'target' is not defined
 
