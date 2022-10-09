@@ -146,12 +146,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas3.html">
-   KNN (using scikit-learn) on Iris dataset.
+   Implementasi K-NN Data Iris
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas4.html">
-   Implementasi K-Means (Tugas 4)
+   Implementasi K-Means Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas5.html">
+   Implementasi Naive Bayes
   </a>
  </li>
 </ul>
@@ -361,6 +366,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-yang-digunakan">
+   Data yang digunakan
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#membaca-dataset-csv-dari-url">
    Membaca Dataset csv dari Url
   </a>
@@ -456,6 +466,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-yang-digunakan">
+   Data yang digunakan
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#membaca-dataset-csv-dari-url">
    Membaca Dataset csv dari Url
   </a>
@@ -543,6 +558,23 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="statistik-diskriptif">
 <h1>Statistik Diskriptif<a class="headerlink" href="#statistik-diskriptif" title="Permalink to this headline">#</a></h1>
+<p>Statistika Deskriptif</p>
+<p>Statistika deskriptif adalah metode yang berkaitan dengan pengumpulan / penyajian data hingga memberi informasi yang berguna.</p>
+<p>Statistika di klasifikasikan menjadi dua yaitu statistika deskriptif dan statistika inferensia dilakukan berdasarkan aktivitas yang dilakukan.</p>
+<p>Contoh Statistika Deskriptif</p>
+<ol class="simple">
+<li><p>Tabel</p></li>
+<li><p>Diagram</p></li>
+<li><p>Grafik</p></li>
+<li><p>Besaran-besaran lain di majalah dan koran-koran.</p></li>
+</ol>
+<section id="data-yang-digunakan">
+<h2>Data yang digunakan<a class="headerlink" href="#data-yang-digunakan" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Dataset <a class="reference external" href="https://github.com/ThreeYas/BMI/blob/main/500_Person_Gender_Height_Weight_Index.csv">BMI</a></p></li>
+<li><p>Excel <a class="reference external" href="https://docs.google.com/spreadsheets/d/1b0fT4yNu7MvPTmvy6kay5M8me14hsoJxYGChih_6utI/edit?usp=sharing">Hitung Manual Statistik Deskriptif</a></p></li>
+</ul>
+</section>
 <section id="membaca-dataset-csv-dari-url">
 <h2>Membaca Dataset csv dari Url<a class="headerlink" href="#membaca-dataset-csv-dari-url" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
@@ -577,7 +609,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-31c935ab-cebb-495d-9a9e-280537651007">
+  <div id="df-03dd8a8d-fe47-41e1-bfae-345a60a1c651">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -685,7 +717,7 @@ title="Print to PDF"
 </table>
 <p>500 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-31c935ab-cebb-495d-9a9e-280537651007')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-03dd8a8d-fe47-41e1-bfae-345a60a1c651')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -736,12 +768,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-31c935ab-cebb-495d-9a9e-280537651007 button.colab-df-convert');
+          document.querySelector('#df-03dd8a8d-fe47-41e1-bfae-345a60a1c651 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-31c935ab-cebb-495d-9a9e-280537651007');
+          const element = document.querySelector('#df-03dd8a8d-fe47-41e1-bfae-345a60a1c651');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1343,7 +1375,7 @@ nilai data yang paling kecil.</p>
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/notebooks_43_1.png" src="_images/notebooks_43_1.png" />
+<img alt="_images/notebooks_45_1.png" src="_images/notebooks_45_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1358,7 +1390,7 @@ nilai data yang paling kecil.</p>
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/notebooks_44_1.png" src="_images/notebooks_44_1.png" />
+<img alt="_images/notebooks_46_1.png" src="_images/notebooks_46_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1373,7 +1405,7 @@ nilai data yang paling kecil.</p>
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/notebooks_45_1.png" src="_images/notebooks_45_1.png" />
+<img alt="_images/notebooks_47_1.png" src="_images/notebooks_47_1.png" />
 </div>
 </div>
 </section>

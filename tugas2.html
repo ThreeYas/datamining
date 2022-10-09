@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/test.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="KNN (using scikit-learn) on Iris dataset." href="tugas3.html" />
+    <link rel="next" title="Implementasi K-NN Data Iris" href="tugas3.html" />
     <link rel="prev" title="Statistik Diskriptif" href="notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -146,12 +146,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas3.html">
-   KNN (using scikit-learn) on Iris dataset.
+   Implementasi K-NN Data Iris
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tugas4.html">
-   Implementasi K-Means (Tugas 4)
+   Implementasi K-Means Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas5.html">
+   Implementasi Naive Bayes
   </a>
  </li>
 </ul>
@@ -361,8 +366,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hitungan-manual-excel">
-   Hitungan Manual Excel
+  <a class="reference internal nav-link" href="#data-yang-digunakan">
+   Data yang digunakan
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -448,8 +453,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hitungan-manual-excel">
-   Hitungan Manual Excel
+  <a class="reference internal nav-link" href="#data-yang-digunakan">
+   Data yang digunakan
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -527,15 +532,19 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="diskritisasi">
 <h1>Diskritisasi<a class="headerlink" href="#diskritisasi" title="Permalink to this headline">#</a></h1>
+<p>Diskretisasi adalah proses mengganti kontinum dengan set poin yang terbatas. Dalam konteks komputasi digital, diskritisasi terjadi ketika sinyal waktu kontinu, seperti audio atau video, direduksi menjadi sinyal diskrit. Proses diskritisasi merupakan bagian integral dari konversi analog ke digital. Diskretisasi terkait dengan istilah kuantisasi.</p>
 <ol class="simple">
 <li><p>Carilah data yang bertipe numerik ( data klassifikasi)</p></li>
 <li><p>Lakukan proses diskritisasi dengan equal width dan equal frequency</p></li>
 <li><p>Lakukan proses diskritisasi dengan basis entropy</p></li>
 <li><p>Kumpulkan tugas dengan link github ( web statis dari jupyter book)</p></li>
 </ol>
-<section id="hitungan-manual-excel">
-<h2>Hitungan Manual Excel<a class="headerlink" href="#hitungan-manual-excel" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/13jVB5l8kF17RitHJ4KQ1eqmQlSCSyoDz/edit?usp=sharing&amp;ouid=112136363283441156113&amp;rtpof=true&amp;sd=true">Diskritisasi</a></p>
+<section id="data-yang-digunakan">
+<h2>Data yang digunakan<a class="headerlink" href="#data-yang-digunakan" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Dataset <a class="reference external" href="https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv">Iris</a></p></li>
+<li><p>Excel <a class="reference external" href="https://docs.google.com/spreadsheets/d/13jVB5l8kF17RitHJ4KQ1eqmQlSCSyoDz/edit?usp=sharing&amp;ouid=112136363283441156113&amp;rtpof=true&amp;sd=true">Hitung Manual Diskritisasi</a></p></li>
+</ul>
 </section>
 <section id="mencari-data-yang-bertipe-numerik-data-klassifikasi">
 <h2>Mencari Data yang bertipe numerik ( data klassifikasi)<a class="headerlink" href="#mencari-data-yang-bertipe-numerik-data-klassifikasi" title="Permalink to this headline">#</a></h2>
@@ -571,7 +580,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0f87dca9-56c9-4cde-8a33-d3862b6b9c6e">
+  <div id="df-25569c16-0ff3-46b0-bc45-dff984b31cbd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -691,7 +700,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0f87dca9-56c9-4cde-8a33-d3862b6b9c6e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-25569c16-0ff3-46b0-bc45-dff984b31cbd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -742,12 +751,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0f87dca9-56c9-4cde-8a33-d3862b6b9c6e button.colab-df-convert');
+          document.querySelector('#df-25569c16-0ff3-46b0-bc45-dff984b31cbd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0f87dca9-56c9-4cde-8a33-d3862b6b9c6e');
+          const element = document.querySelector('#df-25569c16-0ff3-46b0-bc45-dff984b31cbd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -865,7 +874,7 @@ Discretization atau binning digunakan untuk mengubah atribut numerik menjadi atr
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-da2de806-8a60-476b-b4e8-ef81919b10af">
+  <div id="df-f2537f84-654c-43c4-bd79-fbfa3b2e2eca">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -973,7 +982,7 @@ Discretization atau binning digunakan untuk mengubah atribut numerik menjadi atr
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-da2de806-8a60-476b-b4e8-ef81919b10af')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f2537f84-654c-43c4-bd79-fbfa3b2e2eca')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1024,12 +1033,12 @@ Discretization atau binning digunakan untuk mengubah atribut numerik menjadi atr
 
       <script>
         const buttonEl =
-          document.querySelector('#df-da2de806-8a60-476b-b4e8-ef81919b10af button.colab-df-convert');
+          document.querySelector('#df-f2537f84-654c-43c4-bd79-fbfa3b2e2eca button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-da2de806-8a60-476b-b4e8-ef81919b10af');
+          const element = document.querySelector('#df-f2537f84-654c-43c4-bd79-fbfa3b2e2eca');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1074,7 +1083,7 @@ Discretization atau binning digunakan untuk mengubah atribut numerik menjadi atr
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-02c378e1-b417-4d16-a410-ef1e5c3f0410">
+  <div id="df-c3077c3a-7dbb-4315-bc29-a69434137994">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1194,7 +1203,7 @@ Discretization atau binning digunakan untuk mengubah atribut numerik menjadi atr
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-02c378e1-b417-4d16-a410-ef1e5c3f0410')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c3077c3a-7dbb-4315-bc29-a69434137994')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1245,12 +1254,12 @@ Discretization atau binning digunakan untuk mengubah atribut numerik menjadi atr
 
       <script>
         const buttonEl =
-          document.querySelector('#df-02c378e1-b417-4d16-a410-ef1e5c3f0410 button.colab-df-convert');
+          document.querySelector('#df-c3077c3a-7dbb-4315-bc29-a69434137994 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-02c378e1-b417-4d16-a410-ef1e5c3f0410');
+          const element = document.querySelector('#df-c3077c3a-7dbb-4315-bc29-a69434137994');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1377,7 +1386,7 @@ Name: variety, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-24d9f65d-cd9b-4f27-9712-9320b44d8dba">
+  <div id="df-5d886a2e-818b-41cc-ab65-3098a82b372a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1485,7 +1494,7 @@ Name: variety, dtype: int64
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-24d9f65d-cd9b-4f27-9712-9320b44d8dba')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5d886a2e-818b-41cc-ab65-3098a82b372a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1536,12 +1545,12 @@ Name: variety, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-24d9f65d-cd9b-4f27-9712-9320b44d8dba button.colab-df-convert');
+          document.querySelector('#df-5d886a2e-818b-41cc-ab65-3098a82b372a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-24d9f65d-cd9b-4f27-9712-9320b44d8dba');
+          const element = document.querySelector('#df-5d886a2e-818b-41cc-ab65-3098a82b372a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1580,7 +1589,7 @@ Name: variety, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a7af4e4b-5511-4052-ac1d-586c8a08e675">
+  <div id="df-0d21b97f-685d-40fb-a7b6-a8e6a09f8dac">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1700,7 +1709,7 @@ Name: variety, dtype: int64
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a7af4e4b-5511-4052-ac1d-586c8a08e675')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0d21b97f-685d-40fb-a7b6-a8e6a09f8dac')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1751,12 +1760,12 @@ Name: variety, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a7af4e4b-5511-4052-ac1d-586c8a08e675 button.colab-df-convert');
+          document.querySelector('#df-0d21b97f-685d-40fb-a7b6-a8e6a09f8dac button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a7af4e4b-5511-4052-ac1d-586c8a08e675');
+          const element = document.querySelector('#df-0d21b97f-685d-40fb-a7b6-a8e6a09f8dac');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2045,7 +2054,7 @@ k &amp;: jumlah \ partisi \ atribut \ A \\
     <a class='right-next' id="next-link" href="tugas3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">KNN (using scikit-learn) on Iris dataset.</p>
+        <p class="prev-next-title">Implementasi K-NN Data Iris</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
